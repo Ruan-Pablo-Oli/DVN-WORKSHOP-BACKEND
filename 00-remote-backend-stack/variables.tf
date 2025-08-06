@@ -3,17 +3,18 @@ variable "tags"{
     default = {
         Project = "PB - JUL 2025"
         Name = "PB - JUL 2025"
+        CostProject = "CO92000024"
         Environment = "production"
     }
 }
 
 variable "auth"{
     type = object({
-      assume_role_arn = string 
+      profile = string 
     })
 
     default = {
-      assume_role_arn = "arn:aws:iam::295934382060:role/workshop-role"
+      profile = "default"
     }
 }
 
