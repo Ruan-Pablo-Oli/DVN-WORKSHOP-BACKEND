@@ -1,6 +1,6 @@
 # Local .terraform directories
 **/.terraform/*
-
+00-remote-backend-stack/variables.tf
 # Terraform lockfile
 .terraform.lock.hcl
 
