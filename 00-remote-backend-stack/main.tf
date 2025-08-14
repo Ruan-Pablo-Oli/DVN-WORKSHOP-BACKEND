@@ -10,8 +10,9 @@ terraform {
 
 provider "aws" {
   
-  profile = var.auth.profile
-
+  assume_role {
+    role_arn = var.terraform_role_arn
+  }
 
   default_tags {
     tags = var.tags
