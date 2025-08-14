@@ -11,9 +11,8 @@ terraform {
 provider "aws" {
   
   assume_role {
-    role_arn = var.terraform_role_arn
+    role_arn = var.auth.assume_role_arn
   }
-
   default_tags {
     tags = var.tags
   }
