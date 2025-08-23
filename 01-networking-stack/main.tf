@@ -5,6 +5,13 @@ terraform {
             version = "~> 6.0"
         }
     }
+    backend "s3" {
+      bucket = "workshop-s3-bucket-for-remote-backend"
+      key = "networking-stack/terraform.tfstate"
+      region = "us-east-2"
+      dynamodb_table = "workshop-s3-state-locking-tablevn"
+    }
+    
 }
 
 
