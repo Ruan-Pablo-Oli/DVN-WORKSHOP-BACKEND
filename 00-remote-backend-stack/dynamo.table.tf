@@ -1,12 +1,11 @@
 resource "aws_dynamodb_table" "this" {
-  name           = "workshop-s3-state-locking-tablevn"
-  billing_mode   = "PAY_PER_REQUEST"
-  hash_key       = "LockID"
+  name           = var.remote_backend.dynamodb_table_name
+  billing_mode   =var.remote_backend.dynamodb_table_billing_mode
+  hash_key       = var.remote_backend.dynamodb_table_hash_key
 
   attribute {
-    name = "LockID"
+    name = var.remote_backend.dynamodb_table_hash_key
     type = "S"
   }
 
- 
 }
